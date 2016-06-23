@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
-    <title>Project Git Live!!</title>
-    
+    <title>Project Git Live!! : {{ page.title }}</title>
+
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/img/ico/810x810.png">
@@ -19,17 +19,18 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> </head>
 
 <body style="margin:0;padding:0;">
+    {{ content }}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+    $(function() {
+        $(".boot-switch").bootstrapSwitch();
+    });
+</script>
+
 </body>
-<h1>Project Git Live !!</h1>
 </html>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" charset="UTF-8">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<script>
-    $(function() {
-        $(".boot-switch").bootstrapSwitch();
-    });
-</script>
