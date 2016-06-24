@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.lang }}}">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
   <title>Project Git Live!! : {{ page.title }}</title>
 
   <link rel="stylesheet" type="text/css" href="/vendor/umi/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="/vendor/umi/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -60,6 +60,8 @@
 </head>
 <body>
 
+
+
 <header>
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -75,19 +77,32 @@
         <ul class="nav navbar-nav">
           <li><a href="https://git-live.github.io/">Top</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Language </a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> {{page.nav-language_select}}}<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/index.html">Japanese Page</a></li>
-              <li><a href="/index-en.html">English Page</a></li>
+              <li><a href="/index.html">日本語 Page</a></li>
+              <li><a href="/en/index.html">English Page</a></li>
             </ul>
           </li>
           <li><a href="https://github.com/Git-Live/git-live/releases">Download</a></li>
           <li><a href="https://github.com/Git-Live/git-live/wiki">Wiki</a></li>
         </ul>
+
+        <div class="nav navbar-form navbar-right">
+          <div class="form-group">
+            <a href="https://twitter.com/intent/tweet?url=https://git-live.github.io/&text=git-flow%82%C6GitHub-flow%82%F0%91g%82%DD%8D%87%82%ED%82%B9%82%BD%81Agit-live-flow" class="btn btn-twitter"><i class="fa fa-twitter fa-lg"></i> Tweet</a>
+            <a href="http://www.facebook.com/sharer.php?u=https://git-live.github.io/" class="btn btn-facebook"><i class="fa fa-facebook fa-lg"></i> Share</a>
+            <a href="javascript:window.open('http://b.hatena.ne.jp/add?mode=confirm&is_bm=1&title='+escape(document.title)+'&url='+escape(location.href),%20'_blank',%20'width=520,height=600,resizable=1,scrollbars=1');undefined;" class="btn btn-hatebu"><i class="fa fa-hatebu fa-lg"></i> Bookmark</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </header>
+
+
+
+
 
 <div class="container">
 
@@ -116,6 +131,12 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="/vendor/umi/js/bootstrap.min.js"></script>
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 
 <script type="text/javascript">
   $('.bs-component [data-toggle="popover"]').popover();

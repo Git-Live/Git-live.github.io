@@ -1,5 +1,12 @@
 ---
 layout: top
+nav-language_select: 言語選択
+lang: Ja
+outline-header: Git Live
+outline-lead: git-liveはGit Live Flowで開発を行う為のコマンド群です。
+outline-download-from-github: GitHubからダウンロード
+outline-download-translate-this-manual: このマニュアルを翻訳する
+outline-download-visit-git-flow: git-flowについて
 title: TOPページ
 ---
 

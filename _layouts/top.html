@@ -1,16 +1,30 @@
 ---
-layout: umi
+layout: skelton
 ---
 
-  <div class="page-header" id="banner">
+
+
+<div class="jumbotron special">
+  <div class="top_header"></div>
+  <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-7 col-sm-6">
-        <h1>Git Live</h1>
-        <p class="lead">git-liveはGit Live Flowで開発を行う為のコマンド群です。</p>
+      <div class="col-xs-12 outline">
+        <h1>{{ page.outline-header }}</h1>
+        <p class="lead">{{ page.outline-lead }}</p>
+        <div class="download">
+          <a href="https://github.com/Git-Live/git-live/releases" class="btn btn-info btn-lg">
+            <i class="fa fa-github-alt"></i> {{ page.outline-download-from-github }}
+          </a>
+          <a href="https://github.com/Git-Live/Git-live.github.io" class="btn btn-primary btn-lg">
+            <i class="fa fa-play"></i> {{ page.outline-download-translate-this-manual }}
+          </a>
+          <a href="http://nvie.com/posts/a-successful-git-branching-model/" class="btn btn-warning btn-lg"><i class="fa fa-rocket"></i> {{ page.outline-download-visit-git-flow }}</a>
+        </div>
+
       </div>
     </div>
   </div>
-
+</div>
 
   <div class="bs-docs-section clearfix">
     <div class="row">
