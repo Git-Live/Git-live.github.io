@@ -7,27 +7,33 @@ outline-lead: git-liveはGit Live Flowで開発を行う為のコマンド群で
 outline-download-from-github: GitHubからダウンロード
 outline-download-translate-this-manual: このマニュアルを翻訳する
 outline-download-visit-git-flow: git-flowについて
+outline-download-visit-github-flow: github-flowについて
 title: TOPページ
 ---
 
 # Project Git Live!
 
 
-[git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
-は[github-flow](http://scottchacon.com/2011/08/31/github-flow.html)で指摘されているような複雑さはあるものの、
-すでに標準的なワークフローとして馴染んでいます。
+## 初めに
 
-それと同時に、ソースコードを管理するシステムとしてGitHubやそれに類するホスティングサービスを採用するプロジェクトもまた多くなっています。
-GitHubを採用する恩恵は非常に大きなものですが、その最たるものはプルリクエストです。
-[github-flow](http://scottchacon.com/2011/08/31/github-flow.html)では、
+__git-live__はgitの拡張コマンドであり、Vincent Driessenの提唱するブランチモデルである、git-flowをgit hubと連携させてより良いブランチモデルを実現させるための、リポジトリ操作を提供します。
 
-> 「GitHub has an amazing code review system called Pull Requests that I fear not enough people know about.」
-> (GitHubには、残念だが十分な人々には知られていない プルリクエスト と呼ばれる素晴らしいコードレビューの仕組みがある。)
 
-と言われていますが、2016年現在、GitHubを使っていてプルリクエストを知らない人はいないのではないでしょうか。
+git-liveでは、git-flowをgit-hubを交えて運用するために、git-flowブランチモデルを拡張しています。
 
-git-flowはGit Hubを用いない開発手法であるため、残念ながら、プルリクエストの仕組みがgit-flowには含まれません。
+便宜的に、__Git Live flow__と呼びます。
 
-git-live-flowはその問題点を解決するべく、git-flowにプルリクエストの機構を組み込みました。
+このページでは、__git-live__の基本的な使い方と、__Git Live flow__の運用方法を説明しています。
 
+## 注意
+
+ * __Git Live flow__では、git-flowと同じくmergeする事をベースとして考えます。rebaseは行いません。
+ * git-flowはすべてコマンドライン上で解決する、クールなソリューションですが、__Git Live flow__では、git hubが提供するGUIも使用します。
+ * __git-live__は、コマンドラインの集合です。実行されているコマンドとその出力はすべて出力されますので、何が起こっているのかを確認して下さい。
+
+
+## インストール
+
+ * git と php(5.3以上)をインストールしておく必要があります。
+ * __git-live__は、OSX、Linux、Windowsで動作します。
 
