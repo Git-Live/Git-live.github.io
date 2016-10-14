@@ -40,15 +40,19 @@ og:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ wget https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 もしくは
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 その後、
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ chmod 0777 ./git-live
 $ sudo mv ./git-live /usr/local/bin/git-live
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### Linux
 
@@ -56,15 +60,19 @@ $ sudo mv ./git-live /usr/local/bin/git-live
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ wget https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 もしくは
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 その後、
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ chmod 0777 ./git-live
 $ sudo mv ./git-live /usr/local/bin/git-live
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ### Windows
