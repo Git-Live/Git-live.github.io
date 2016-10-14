@@ -1,5 +1,18 @@
 auto: true
 server: true
 markdown: kramdown
-exclude: materials
+highlighter: rouge
 
+# Handling Reading
+exclude: ["README.md", ".gitignore",]
+
+# SCSS
+sass:
+  sass_dir: _scss
+  style: :compressed
+
+
+
+
+url: "https://git-live.github.io"
+baseurl: "/"

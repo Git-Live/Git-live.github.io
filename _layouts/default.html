@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="{{ page.lang }}">
+<head>
+<meta charset="UTF-8">
+<title> {{ page.title }}</title>
+<!--====================== meta ======================-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="Keywords" content="{{ page.meta.keywords }}">
+<meta name="Description" content="{{ page.meta.description }}">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link rel="manifest" href="/manifest.json">
+
+<meta property="og:title" content="{{ page.og.title }}">
+<meta property="og:description" content="{{ page.og.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.og.url }}">
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.og.image }}">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.og.title }}">
+<meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.og.url }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ page.og.image }}">
+
+<link href="{{ site.url }}{{ site.baseurl }}img/icon/64x64.ico" rel="shortcut icon">
+<link href="{{ site.url }}{{ site.baseurl }}img/icon/64x64.ico" rel="icon">
+<link href="{{ site.url }}{{ site.baseurl }}img/icon/810x810.png" rel="apple-touch-icon">
+<link href="{{ site.url }}{{ site.baseurl }}img/icon/57x57.png" sizes="57x57" rel="apple-touch-icon">
+<link href="{{ site.url }}{{ site.baseurl }}img/icon/72x72.png" sizes="72x72" rel="apple-touch-icon">
+<link href="{{ site.url }}{{ site.baseurl }}img/icon/76x76.png" sizes="76x76" rel="apple-touch-icon">
+<link href="{{ site.url }}{{ site.baseurl }}img/icon/114x114.png" sizes="114x114" rel="apple-touch-icon">
+<link href="{{ site.url }}{{ site.baseurl }}img/icon/120x120.png" sizes="120x120" rel="apple-touch-icon">
+<link href="{{ site.url }}{{ site.baseurl }}img/icon/144x144.png" sizes="144x144" rel="apple-touch-icon">
+<link href="{{ site.url }}{{ site.baseurl }}img/icon/152x152.png" sizes="152x152" rel="apple-touch-icon">
+
+
+</head>
+
+<body>
+
+ {{ content }}
+
+</body>
+</html>
