@@ -89,18 +89,22 @@ $ sudo mv ./git-live /usr/local/bin/git-live
 
 
 ## <span class="git-live-flow">git-live-flow</span>の要件
+
  * リモートブランチは以下の三種類を用いる
 
 origin
-: Forkした自分のアカウント管理配下にあるリポジトリ
+: Forkした自分専用のリモートリポジトリ。
 
 upstream
-: 源流のリポジトリ
+: 公式リポジトリ（プロジェクトメンテナが作成した源流のリポジトリ）。
+: write権限がない場合も設定する。
+: write権限がある場合は、releaseおよびhotfixを行うことができる。
 
-release
+deploy
 : リリース作業用のリポジトリ。別途用意する必要がない場合は、upstreamと同一となる。
 : 特にwebアプリケーションの開発現場では、リリース用のファイルをDMZに一度スタックさせる必要があることが多い。
 : リリース用のリモートリポジトリを、Git Hubの管理外にする事によって、リリース作業自体はGit Hubの生死に依存しないと言うメリットもある。
+: アクセス権限は、公式リポジトリと全く同じでないとならない。
 
  * 特別なリポジトリとして用意するのは以下の二つのみである
 
@@ -110,24 +114,77 @@ develop
 
 master
 : エンドユーザー向けのリポジトリであり、直接は操作されない。
-: `git live release close`及び、`git live hotfix close`でのみ更新され、更新時には必ずタグが打ち込まれる
+: `git live release close`及び、`git live hotfix close`でのみ更新され、更新時には必ずタグが打ち込まれる。
 
+ * リモートリポジトリはすべてベアリポジトリである必要がある
+    * githubなどのサービスを利用していれば、リモートリポジトリはベアリポジトリとなります
 
+ * release及び、hotfix可能なのは、公式リポジトリに変更権限を持つユーザーのみ
 
  * hotfix（超緊急対応）以外での源流へのマージは必ず、pull-request経由で行う
- *
 
 
 
-## 開発を始める前に
+## 最も単純な流れ
 
-<span class="git-live-flow">git-live-flow</span>を始める前に、幾つかの下準備が必要です。
+### 準備
+
+#### プロジェクトメンテナは公式リポジトリを作成する
+
+すべての源流となる、公式リポジトリを作成しプロジェクトメンバーに公開します。
+
+リリースの権限を持つプロジェクトメンバーには、write権限を与える必要があります。
+
+### プロジェクトメンテナはデプロイリポジトリを作成する
+
+公式リポジトリをForkしたデプロイ専用のリポジトリを用意することが出来ます。
+
+必要が無い場合は、デプロイリポジトリと公式リポジトリを兼用することが出来ます。
+
+
+特に、WEBアプリケーション開発の現場では、リリース用のファイルをDMZに一度スタックさせ、同一ネットワークにリリース用のファイルを置いた後、デプロイという流れを踏むことが多い。
+
+デプロイリポジトリはそのためのリポジトリです。
 
 
 
-### ProjectのFork
+#### 公式リポジトリのFork
 
-<span class="git-live-flow">git-live-flow</span>では、最終的にpull-requestによって源流のリポジトリにmergeを行う為、Forkを行います。
+この作業は、プロジェクトメンバーが開発を始める際一番初めに行う作業ですが、一度行えば二度と行う必要はありません。
+
+
+#### リモートリポジトリをcloneする
+
+開発用に、リモートリポジトリをcloneし、cloneしたリポジトリに正しいリモートリポジトリを定義する。
+
+言葉で説明すると、とても難しそうですが、実際には、
+
+``````````````````````
+git live init
+
+``````````````````````
+
+コマンドを実行し、幾つかの質問に答えるだけです。
+
+
+``````````````````````
+Please enter only your remote-repository.
+: <fork したあなた専用のリポジトリ>
+Please enter common remote-repository.
+: <公式リポジトリ>
+Please enter deploying dedicated remote-repository.
+If you return in the blank, it becomes the default setting.
+default:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+: <デプロイリポジトリ>（空で入力した場合は、公式リポジトリと同じ）
+Please enter work directory path.
+If you return in the blank, it becomes the default setting.
+default:xxxxxxx
+: <ディレクトリ名。空で入力した場合は、画面に表示されているディレクトリ名となる>
+``````````````````````
+
+
+この作業も、自分の開発環境を破棄しない限りは、二度と行う必要はありません
+
 
 
 
