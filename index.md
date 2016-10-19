@@ -496,7 +496,7 @@ $ git live hotfix close
 
 
 `git live release open <release name>`
-    : リリース作業を開始するため、release用のブランチを作成します。
+: リリース作業を開始するため、release用のブランチを作成します。
 
 
 `git live release close`
