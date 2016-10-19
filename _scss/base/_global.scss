@@ -21,7 +21,9 @@ a:focus {
 
 
 h1 {
-  font-size: 40px;
+    font-size: 40px;
+    display: block;
+    text-align: center;
 }
 
 h2 {
@@ -55,4 +57,21 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 500;
     line-height: 1.2;
     color: inherit;
+}
+
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
 }
