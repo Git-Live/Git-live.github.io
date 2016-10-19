@@ -9,6 +9,9 @@ og:
     description: "Git live flowは、git flowとgithub flowを合わせた、より良い開発フローです。"
     url: ""
     image: "img/og.jpg"
+lang: ja
+
+
 ---
 
 ## はじめに {#h-getting-started}
@@ -185,6 +188,39 @@ default:xxxxxxx
 
 この作業も、自分の開発環境を破棄しない限りは、二度と行う必要はありません
 
+### feature ブランチの作成
+
+すべての開発は、featureブランチで行われます。
+
+featureリポジトリは、upstream/developから作成されます。
+
+``````````````````````
+git live feature start <featureの名前>
+
+``````````````````````
+
+### featureのpush
+
+featureの開発が終わったら、originリポジトリにpushします。
+
+``````````````````````
+git live push
+``````````````````````
+
+もしくは
+
+``````````````````````
+git live feature push
+``````````````````````
+
+で行えます。
+
+どちらも、現在選択されているfeatureブランチをpushしますが、以下のような違いがあります。
+
+ * `git live push`
+     * 作業用リポジトリを最新化せずにpushする
+ * `git live feature push`
+     * 作業用リポジトリを最新化してpushする
 
 
 
