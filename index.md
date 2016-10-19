@@ -27,6 +27,7 @@ lang: ja
 
  * <span class="spell git-live-flow">git-live-flow</span>は。git-flowと同じく、マージを前提にした開発フローです。rebaseは行いません。リモートリポジトリを汚したくない場合は、squash mergeを行います。
 
+
 ## インストール・設定 {#h-installation}
 
  * <span class="spell git-live">git-live</span>は<span class="spell php">PHP</span>で記述された、<span class="spell git">Git</span>の拡張コマンド群です。あらかじめ、<span class="spell git">Git</span>と<span class="spell php">PHP</span>をインストールしておく必要があります。
