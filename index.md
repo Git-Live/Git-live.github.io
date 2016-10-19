@@ -415,7 +415,7 @@ $ git live hotfix sync
 実際には、
 
 `````````````````````` shell
-$ git live release close
+$ git live hotfix close
 ``````````````````````
 
 コマンドで自動的に行うことが出来ます。
