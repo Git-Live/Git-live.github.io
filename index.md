@@ -502,6 +502,10 @@ $ git live hotfix close
 `git live release close`
 : releaseを終了し、'master'と'develop'にコードをマージし、タグを作成します。
 
+`git live release close-force`
+: releaseを終了し、'master'と'develop'にコードをマージし、タグを作成します。
+: エラーを無視して強制的にreleaseを閉じます。
+
 
 `git live release sync`
 : git live release pullとgit live release pushを連続で実行します。
@@ -509,6 +513,7 @@ $ git live hotfix close
 
 `git live release state`
 : releaseの状態を確認します。
+: release openされているなら、リリースされるファイルの一覧を取得することが出来ます。
 
 
 `git live release pull`
