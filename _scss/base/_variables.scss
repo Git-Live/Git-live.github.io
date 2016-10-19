@@ -1,11 +1,13 @@
 
 // font family
-$global-font-family: BlinkMacSystemFont,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-$code-font-family: 'Bitstream Vera Sans Mono', Consolas,Liberation Mono,Menlo,Courier,monospace;
+$global-font-family: BlinkMacSystemFont,Segoe UI,Open Sans, Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
 
-$branch_name-font-family: 'Bitstream Vera Sans Mono', Consolas,Liberation Mono,Menlo,Courier,monospace;
+$code-font-family: Bitstream Vera Sans Mono, Consolas,Liberation Mono,Menlo,Courier,monospace;
 
-$repository_name-font-family: 'Bitstream Vera Sans Mono', Consolas,Liberation Mono,Menlo,Courier,monospace;
+$branch_name-font-family: Bitstream Vera Sans Mono, Consolas,Liberation Mono,Menlo,Courier,monospace;
+
+$repository_name-font-family: Bitstream Vera Sans Mono, Consolas,Liberation Mono,Menlo,Courier,monospace;
 
 
