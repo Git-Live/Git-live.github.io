@@ -6,6 +6,10 @@ highlighter: rouge
 # Handling Reading
 exclude: ["README.md", ".gitignore",]
 
+# Markdown Processors
+kramdown:
+  input: GFM
+
 # SCSS
 sass:
   sass_dir: _scss
@@ -16,4 +20,6 @@ sass:
 
 url: "https://git-live.github.io"
 baseurl: "/"
+
+
 
