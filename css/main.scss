@@ -3,8 +3,13 @@
 
 // Base
 @import 'base/reset';
-@import 'base/variable';
+@import 'base/variables';
+
+
+// Site
+@import 'site/spell';
 
 
 // Components
 @import 'components/syntax';
+

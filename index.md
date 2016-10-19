@@ -11,28 +11,27 @@ og:
     image: "img/og.jpg"
 lang: ja
 
-
 ---
 
 ## はじめに {#h-getting-started}
-<span class="git-live-flow">git-live-flow</span>は、<strong>PHP</strong>で記述された、git hub及びそれに類似するサービスを利用して行う、ブランチモデルです。
+<span class="spell git-live-flow">git-live-flow</span>は、<span class="spell php">PHP</span>で記述された、git hub及びそれに類似するサービスを利用して行う、ブランチモデルです。
 
 
-<span class="git-live">git-live</span>は<strong>git</strong>の拡張コマンドであり、<span class="git-live-flow">git-live-flow</span>を行う為の高度なリポジトリ操作を提供します。
+<span class="spell git-live">git-live</span>は<span class="spell git">Git</span>の拡張コマンドであり、<span class="spell git-live-flow">git-live-flow</span>を行う為の高度なリポジトリ操作を提供します。
 
 
-このサイトでは、<span class="git-live-flow">git-live-flow</span>の流れと、<span class="git-live">git-live</span>の基本的な使い方を説明します。
+このサイトでは、<span class="spell git-live-flow">git-live-flow</span>の流れと、<span class="spell git-live">git-live</span>の基本的な使い方を説明します。
 
 
 ## 入門 {#h-introduction}
 
- * <span class="git-live-flow">git-live-flow</span>は。git-flowと同じく、マージを前提にした開発フローです。rebaseは行いません。リモートリポジトリを汚したくない場合は、squash mergeを行います。
+ * <span class="spell git-live-flow">git-live-flow</span>は。git-flowと同じく、マージを前提にした開発フローです。rebaseは行いません。リモートリポジトリを汚したくない場合は、squash mergeを行います。
 
 ## インストール・設定 {#h-installation}
 
- * <span class="git-live">git-live</span>は<strong>PHP</strong>で記述された、<strong>git</strong>の拡張コマンド群です。あらかじめ、<strong>git</strong>と<strong>PHP</strong>をインストールしておく必要があります。
+ * <span class="spell git-live">git-live</span>は<span class="spell php">PHP</span>で記述された、<span class="spell git">Git</span>の拡張コマンド群です。あらかじめ、<span class="spell git">Git</span>と<span class="spell php">PHP</span>をインストールしておく必要があります。
 
- * <span class="git-live">git-live</span>は、、<strong>git</strong>と<strong>PHP</strong>が動作する以下の環境で動作します。
+ * <span class="spell git-live">git-live</span>は、、<span class="spell git">Git</span>と<span class="spell php">PHP</span>が動作する以下の環境で動作します。
      * MAC OS
      * Linux
      * Windows
@@ -42,14 +41,12 @@ lang: ja
 
 `````````````````````` shell
 $ wget https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
-
 ``````````````````````
 
 もしくは
 
 `````````````````````` shell
 $ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
-
 ``````````````````````
 
 その後、
@@ -57,7 +54,6 @@ $ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.p
 `````````````````````` shell
 $ chmod 0777 ./git-live
 $ sudo mv ./git-live /usr/local/bin/git-live
-
 ``````````````````````
 
 ### Linux
@@ -65,14 +61,12 @@ $ sudo mv ./git-live /usr/local/bin/git-live
 
 `````````````````````` shell
 $ wget https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
-
 ``````````````````````
 
 もしくは
 
 `````````````````````` shell
 $ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
-
 ``````````````````````
 
 その後、
@@ -80,7 +74,6 @@ $ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.p
 `````````````````````` shell
 $ chmod 0777 ./git-live
 $ sudo mv ./git-live /usr/local/bin/git-live
-
 ``````````````````````
 
 
@@ -91,40 +84,41 @@ $ sudo mv ./git-live /usr/local/bin/git-live
  * https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.bat
 
 
-## <span class="git-live-flow">git-live-flow</span>の要件
+## <span class="spell git-live-flow">git-live-flow</span>の要件
 
  * リモートブランチは以下の三種類を用いる
 
-origin
+<span class="spell repository_name">origin</span>
 : Forkした自分専用のリモートリポジトリ。
 
-upstream
+<span class="spell repository_name">upstream</span>
 : 公式リポジトリ（プロジェクトメンテナが作成した源流のリポジトリ）。
 : write権限がない場合も設定する。
 : write権限がある場合は、releaseおよびhotfixを行うことができる。
 
-deploy
-: リリース作業用のリポジトリ。別途用意する必要がない場合は、upstreamと同一となる。
+<span class="spell repository_name">deploy</span>
+: リリース作業用のリポジトリ。別途用意する必要がない場合は、<span class="spell repository_name">upstream</span>と同一となる。
 : 特にwebアプリケーションの開発現場では、リリース用のファイルをDMZに一度スタックさせる必要があることが多い。
 : リリース用のリモートリポジトリを、Git Hubの管理外にする事によって、リリース作業自体はGit Hubの生死に依存しないと言うメリットもある。
 : アクセス権限は、公式リポジトリと全く同じでないとならない。
 
- * 特別なリポジトリとして用意するのは以下の二つのみである
+ * 特別なブランチとして用意するのは以下の二つのみである
 
-develop
-: 開発用のリポジトリ。pull-requestの送信先は常にここになる。
-: エンドユーザーではなく、開発者用の最新は常にdevelopブランチとなり、ナイトリービルドを行う場合は、developから行う
+<span class="spell branch_name">develop</span>
+: 開発用のブランチ。pull-requestの送信先は常にここになる。
+: エンドユーザーではなく、開発者用の最新は常に<span class="spell branch_name">develop</span>ブランチとなり、ナイトリービルドを行う場合は、<span class="spell branch_name">develop</span>ブランチから行う
 
-master
-: エンドユーザー向けのリポジトリであり、直接は操作されない。
+<span class="spell branch_name">master</span>
+: 直接は操作されない。
 : `git live release close`及び、`git live hotfix close`でのみ更新され、更新時には必ずタグが打ち込まれる。
+: hotfix を行う際は、<span class="spell repository_name">upstream</span>リポジトリの<span class="spell branch_name">master</span>ブランチをベースとして行う。
 
  * リモートリポジトリはすべてベアリポジトリである必要がある
     * githubなどのサービスを利用していれば、リモートリポジトリはベアリポジトリとなります
 
  * release及び、hotfix可能なのは、公式リポジトリに変更権限を持つユーザーのみ
 
- * hotfix（超緊急対応）以外での源流へのマージは必ず、pull-request経由で行う
+ * hotfix以外での源流へのマージは必ず、pull-request経由で行う
 
 
 
@@ -164,11 +158,9 @@ master
 
 `````````````````````` shell
 $ git live init
-
 ``````````````````````
 
 コマンドを実行し、幾つかの質問に答えるだけです。
-
 
 ``````````````````````
 Please enter only your remote-repository.
@@ -188,36 +180,33 @@ default:xxxxxxx
 
 この作業も、自分の開発環境を破棄しない限りは、二度と行う必要はありません
 
-### feature ブランチの作成
+### <span class="spell branch_name">feature</span>ブランチの作成
 
-すべての開発は、featureブランチで行われます。
+すべての開発は、<span class="spell branch_name">feature</span>ブランチで行われます。
 
-featureリポジトリは、upstream/developから作成されます。
+<span class="spell branch_name">feature</span>ブランチは、<span class="spell repository_name">upstream</span>の<span class="spell branch_name">develop</span>ブランチから作成されます。
 
 `````````````````````` shell
 $ git live feature start <featureの名前>
-
 ``````````````````````
 
-### featureのpush
+### <span class="spell branch_name">feature</span>のpush
 
-featureの開発が終わったら、originリポジトリにpushします。
+<span class="spell branch_name">feature</span>ブランチでの開発が終わったら、<span class="spell repository_name">origin</span>リポジトリにpushします。
 
 `````````````````````` shell
 $ git live push
-
 ``````````````````````
 
 もしくは
 
 `````````````````````` shell
 $ git live feature push
-
 ``````````````````````
 
 で行えます。
 
-どちらも、現在選択されているfeatureブランチをpushしますが、以下のような違いがあります。
+どちらも、現在選択されている<span class="spell branch_name">feature</span>ブランチをpushしますが、以下のような違いがあります。
 
  * `git live push`
      * 作業用リポジトリを最新化せずにpushする

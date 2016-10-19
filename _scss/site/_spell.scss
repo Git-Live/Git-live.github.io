@@ -1,0 +1,22 @@
+.spell {
+    &.git{
+        font-weight: bold;
+    }
+    &.php{
+        font-weight: bold;
+    }
+    &.git-live{
+        font-style: italic;
+        font-weight: bold;
+    }
+    &.git-live-flow{
+        font-style: italic;
+        font-weight: bold;
+    }
+    &.repository_name{
+        font-family: $repository_name-font-family;
+    }
+    &.branch_name{
+        font-family: $branch_name-font-family;
+    }
+}
