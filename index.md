@@ -40,48 +40,48 @@ lang: ja
 
 ### MAC OS
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````` shell
 $ wget https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 
 もしくは
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 $ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 
 その後、
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 $ chmod 0777 ./git-live
 $ sudo mv ./git-live /usr/local/bin/git-live
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 
 ### Linux
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 $ wget https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 
 もしくは
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 $ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 
 その後、
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 $ chmod 0777 ./git-live
 $ sudo mv ./git-live /usr/local/bin/git-live
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 
 
 ### Windows
@@ -163,7 +163,7 @@ master
 言葉で説明すると、とても難しそうですが、実際には、
 
 ``````````````````````
-git live init
+$ git live init
 
 ``````````````````````
 
@@ -195,7 +195,7 @@ default:xxxxxxx
 featureリポジトリは、upstream/developから作成されます。
 
 ``````````````````````
-git live feature start <featureの名前>
+$ git live feature start <featureの名前>
 
 ``````````````````````
 
@@ -204,13 +204,15 @@ git live feature start <featureの名前>
 featureの開発が終わったら、originリポジトリにpushします。
 
 ``````````````````````
-git live push
+$ git live push
+
 ``````````````````````
 
 もしくは
 
 ``````````````````````
-git live feature push
+$ git live feature push
+
 ``````````````````````
 
 で行えます。
