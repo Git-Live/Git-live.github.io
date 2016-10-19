@@ -27,7 +27,7 @@ lang: ja
 
 <span class="spell git-live-flow">git-live-flow</span>は<a href="http://nvie.com/posts/a-successful-git-branching-model/" rel="no-follow" target="_blank">git-flow</a>と同じく、マージを前提にした開発フローです。
 
-考え方は、非常によく似ています。
+<span class="spell git-live-flow">git-live-flow</span>とgit-flow。この二つの考え方は非常によく似ています。
 
 rebaseは行いません。リモートリポジトリを大量のコミットログで汚したくない場合は、squash mergeを行います。
 
@@ -219,6 +219,6 @@ $ git live feature push
      * 作業用リポジトリを最新化してpushする
 
 
-
+## コマンドリファレンス
 
 
