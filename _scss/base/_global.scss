@@ -25,27 +25,31 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+    font-size: 28px;
+    border-left: 6px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
 h3 {
-  font-size: 24px;
+    font-size: 24px;
+    padding: .25em 0 .25em .75em;
+    border-left: 6px solid #ccc;
 }
 
 h4 {
-  font-size: 19px;
+    font-size: 19px;
 }
 
 h5 {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 h6 {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-weight: 300;
-  line-height: 1.2;
-  color: inherit;
+    font-weight: 300;
+    line-height: 1.2;
+    color: inherit;
 }
