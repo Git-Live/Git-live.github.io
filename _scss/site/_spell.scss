@@ -25,4 +25,10 @@
     &.release-close{
         font-family: $branch_name-font-family;
     }
+    &.hotfix-open{
+        font-family: $branch_name-font-family;
+    }
+    &.hotfix-close{
+        font-family: $branch_name-font-family;
+    }
 }

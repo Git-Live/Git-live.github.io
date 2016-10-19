@@ -4,6 +4,7 @@ title: "GIT LIVE FLOW : GitHub FLOW + GIT FLOW"
 meta:
     description: "Git live flowは、git flowとGitHub flowを合わせた、より良い開発フローです。"
     keywords: "Git live flow,git-live,git flow,GitHub flow,GitHub,git,開発フロー,ブランチモデル"
+    author: "suzunone.eleven"
 og:
     title: "GIT LIVE FLOW : GitHub FLOW + GIT FLOW"
     description: "Git live flowは、git flowとGitHub flowを合わせた、より良い開発フローです。"
@@ -128,8 +129,7 @@ $ sudo mv ./git-live /usr/local/bin/git-live
  * hotfix以外での源流へのマージは必ず、pull-request経由で行う
 
 
-
-## 最も単純な流れ {#h-basic_flow}
+## <span class="spell git-live-flow">Git Live Flow</span>の手順
 
 ### 準備
 
@@ -186,6 +186,10 @@ default:xxxxxxx
 
 
 この作業も、自分の開発環境を破棄しない限りは、二度と行う必要はありません
+
+
+
+### 最も単純な流れ {#h-basic_flow}
 
 #### <span class="spell branch_name">feature</span>ブランチの作成
 
@@ -362,7 +366,44 @@ $ git live release close-force
 ただし、自動的に行われるmergeでConflictしないように、<span class="spell branch_name">release</span>ブランチの内容をすべて手動で、<span class="spell branch_name">develop</span>ブランチにマージしておいてください。
 
 
+### ホットフィックスの流れ {#h-hotfix_flow}
 
+
+#### <span class="spell hotfix-open">hotfix open</span>する
+
+実際に運用を続けていると、<span class="spell branch_name">develop</span>ブランチに、幾つかの<span class="spell branch_name">feature</span>をマージ済だが、
+<span class="spell branch_name">develop</span>ブランチへの変更を無視して、緊急性の高いコードだけを個別にリリースしたいと言うようなことがあります。
+
+このホットフィックスを実現するためには、まず、<span class="spell branch_name">master</span>ブランチから<span class="spell branch_name">hotfix</span>ブランチを作成する必要があります。
+
+この<span class="spell branch_name">hotfix</span>ブランチが作成されている状態を、<span class="spell git-live-flow">Git Live Flow</span>では、
+<span class="spell hotfix-open">hotfix open</span>状態と定義してます。
+
+リリースと同じく、ホットフィックスも、多重に<span class="spell hotfix-open">hotfix open</span>することは出来ません。
+
+<span class="spell hotfix-open">hotfix open</span>するには、前回のhotfixを<span class="spell hotfix-close">hotfix close</span>する必要があります。
+
+<span class="spell hotfix-open">hotfix open</span>可能か調べるには、以下のコマンドを実行します。
+
+
+`````````````````````` shell
+$ git live hotfix state
+``````````````````````
+
+<span class="spell hotfix-open">hotfix open</span>された状態で、`git live hotfix state`コマンドを実行すると、更新されるファイルの一覧を取得することが出来ます。
+
+
+#### コードを修正する
+
+ホットフィックスでのコードの修正は、<span class="spell release-open">release open</span>状態でのコードの修正とよく似ています。
+
+
+プルリクエストの宛先が<span class="spell branch_name">release</span>ブランチではなく、<span class="spell branch_name">hotfix</span>ブランチとなることと、実行するコマンドが`git live release sync`ではなく、以下のように変更になることだけです。
+
+
+`````````````````````` shell
+$ git live hotfix sync
+``````````````````````
 
 ## コマンドリファレンス {#h-command_reference}
 
