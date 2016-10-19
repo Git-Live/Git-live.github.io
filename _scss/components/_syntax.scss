@@ -1,13 +1,16 @@
 .highlight { 
-    background-color: #efefef;
-    padding: 7px 7px 7px 10px;
-    border: 1px solid #ddd;
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 2px;
+    
     -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
     -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
     box-shadow: 3px 3px rgba(0,0,0,0.1);
-    margin: 20px 0 20px 0;
     overflow: hidden;
     line-height: 1.5;
+    white-space: pre-wrap;
 
 
     .c { color: #586E75 } // Comment

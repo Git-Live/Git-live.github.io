@@ -25,7 +25,11 @@ lang: ja
 
 ## 入門 {#h-introduction}
 
- * <span class="spell git-live-flow">git-live-flow</span>は。git-flowと同じく、マージを前提にした開発フローです。rebaseは行いません。リモートリポジトリを汚したくない場合は、squash mergeを行います。
+<span class="spell git-live-flow">git-live-flow</span>は<a href="http://nvie.com/posts/a-successful-git-branching-model/" rel="no-follow" target="_blank">git-flow</a>と同じく、マージを前提にした開発フローです。
+
+考え方は、非常によく似ています。
+
+rebaseは行いません。リモートリポジトリを大量のコミットログで汚したくない場合は、squash mergeを行います。
 
 
 ## インストール・設定 {#h-installation}

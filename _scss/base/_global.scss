@@ -5,3 +5,16 @@ body {
     font-family: $global-font-family;
     line-height: 1.42857;
 }
+
+a {
+    color: #18bc9c;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #0f7864;
+    text-decoration: underline;
+}
+a:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
