@@ -185,7 +185,7 @@ default:xxxxxxx
 
 この作業も、自分の開発環境を破棄しない限りは、二度と行う必要はありません
 
-### <span class="spell branch_name">feature</span>ブランチの作成
+#### <span class="spell branch_name">feature</span>ブランチの作成
 
 すべての開発は、<span class="spell branch_name">feature</span>ブランチで行われます。
 
@@ -195,7 +195,7 @@ default:xxxxxxx
 $ git live feature start <featureの名前>
 ``````````````````````
 
-### <span class="spell branch_name">feature</span>のpush
+#### <span class="spell branch_name">feature</span>のpush
 
 <span class="spell branch_name">feature</span>ブランチでの開発が終わったら、<span class="spell repository_name">origin</span>リポジトリにpushします。
 
@@ -218,7 +218,7 @@ $ git live feature push
  * `git live feature push`
      * 作業用リポジトリを最新化してpushする
 
-### プルリクエストを出し、コードレビューを受ける/行う
+#### プルリクエストを出し、コードレビューを受ける/行う
 
 
 <span class="spell repository_name">origin</span>にpushした、<span class="spell branch_name">feature</span>ブランチから、<span class="spell repository_name">upstream</span>の<span class="spell branch_name">develop</span>ブランチへpull-request
@@ -243,6 +243,68 @@ $ git live pr pull
 
 `git live pr pull`は、`git live pr track`で自動作成されたブランチで行う必要があります。
 
+
+#### <span class="spell branch_name">develp</span>ブランチから<span class="spell branch_name">release</span>ブランチを作成する
+
+リリース作業を行うために、<span class="spell branch_name">release</span>ブランチを作成します。
+
+この<span class="spell branch_name">release</span>ブランチブランチが作成された状態を、<span class="spell git-live-flow">git-live-flow</span>では、release open状態と定義してます。
+
+ release openするには、以下のコマンドを実行します。
+
+`````````````````````` shell
+$ git live release open
+``````````````````````
+
+<span class="spell branch_name">release</span>ブランチは、リリース作業が完了次第削除します。
+
+つまり、<span class="spell branch_name">release</span>ブランチは常に一つであり、
+<span class="spell branch_name">release</span>ブランチが作成済の場合は、先に前回のリリースを終わらせる(release closeする)必要があります。
+
+すでにrelease openされている場合、`git live release open`は失敗します。
+
+`git live release open`可能かどうかを調べるには以下のコマンドを実行します。
+
+
+`````````````````````` shell
+$ git live release state
+``````````````````````
+
+結果の最終行が、、
+
+``````````````````````
+release is close.
+``````````````````````
+
+となった場合、`git live release open`可能です。
+
+最終的なビルドの作成、あるいは、ソースコードのデプロイは、release openした状態で行います。
+
+
+release openした状態で、不具合が見つかりコードを修正したくなった場合は、以下の方法で修正可能です。
+
+1. コードを修正し、<span class="spell repository_name">upstream</span>に作成されたreleaseブランチにプルリクエストを出します
+2. 修正が問題ないことを確認したら、コードをマージします
+3. 以下のコマンドを実行します
+
+`````````````````````` shell
+$ git live release sync
+``````````````````````
+
+もしくは、ローカルに作成されたreleaseブランチのコードを直接修正し、commitした後、以下のコマンドを実行します。
+
+
+`````````````````````` shell
+$ git live release sync
+``````````````````````
+
+誰かが、release openしたreleaseブランチを、手元に取得する場合は、以下のコマンドを実行します。
+
+また、誰かの変更を、取り込む場合も同様です。
+
+`````````````````````` shell
+$ git live release sync
+``````````````````````
 
 ## コマンドリファレンス {#h-command_reference}
 
