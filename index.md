@@ -12,22 +12,24 @@ og:
 lang: ja
 
 ---
+# Git Live Flow
+
 
 ## はじめに {#h-getting-started}
-<span class="spell git-live-flow">git-live-flow</span>は、<span class="spell php">PHP</span>で記述された、GitHub及びそれに類似するサービスを利用して行う、ブランチモデルです。
+<span class="spell git-live-flow">Git Live Flow</span>は、<span class="spell php">PHP</span>で記述された、GitHub及びそれに類似するサービスを利用して行う、ブランチモデルです。
 
 
-<span class="spell git-live">git-live</span>は<span class="spell git">Git</span>の拡張コマンドであり、<span class="spell git-live-flow">git-live-flow</span>を行う為の高度なリポジトリ操作を提供します。
+<span class="spell git-live">git-live</span>は<span class="spell git">Git</span>の拡張コマンドであり、<span class="spell git-live-flow">Git Live Flow</span>を行う為の高度なリポジトリ操作を提供します。
 
 
-このサイトでは、<span class="spell git-live-flow">git-live-flow</span>の流れと、<span class="spell git-live">git-live</span>の基本的な使い方を説明します。
+このサイトでは、<span class="spell git-live-flow">Git Live Flow</span>の流れと、<span class="spell git-live">git-live</span>の基本的な使い方を説明します。
 
 
 ## 入門 {#h-introduction}
 
-<span class="spell git-live-flow">git-live-flow</span>は<a href="http://nvie.com/posts/a-successful-git-branching-model/" rel="nofollow" target="_blank">git-flow</a>と同じく、マージを前提にした開発フローです。
+<span class="spell git-live-flow">Git Live Flow</span>は<a href="http://nvie.com/posts/a-successful-git-branching-model/" rel="nofollow" target="_blank">git-flow</a>と同じく、マージを前提にした開発フローです。
 
-<span class="spell git-live-flow">git-live-flow</span>とgit-flow。この二つの考え方は非常によく似ています。
+<span class="spell git-live-flow">Git Live Flow</span>とgit-flow。この二つの考え方は非常によく似ています。
 
 rebaseは行いません。リモートリポジトリを大量のコミットログで汚したくない場合は、squash mergeを行います。
 
@@ -89,7 +91,7 @@ $ sudo mv ./git-live /usr/local/bin/git-live
  * [https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.bat](https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.bat)
 
 
-## <span class="spell git-live-flow">git-live-flow</span>の要件 {#h-requirements}
+## <span class="spell git-live-flow">Git Live Flow</span>の要件 {#h-requirements}
 
  * リモートブランチは以下の三種類を用いる
 
@@ -252,7 +254,7 @@ $ git live pr pull
 <span class="spell branch_name">release</span>ブランチは、<span class="spell repository_name">upstream</span>の<span class="spell branch_name">develp</span>ブランチから作成します。
 
 
-この<span class="spell branch_name">release</span>ブランチブランチが作成された状態を、<span class="spell git-live-flow">git-live-flow</span>では、
+この<span class="spell branch_name">release</span>ブランチブランチが作成された状態を、<span class="spell git-live-flow">Git Live Flow</span>では、
 <span class="spell release-open">release open</span>状態と定義してます。
 
 <span class="spell release-open">release open</span>するには、以下のコマンドを実行します。
@@ -329,7 +331,7 @@ $ git live release state
 すべてのリリース作業が完了したら、<span class="spell branch_name">release</span>ブランチを<span class="spell branch_name">master</span>ブランチと<span class="spell branch_name">develop</span>ブランチにマージし、
 <span class="spell branch_name">release</span>ブランチを削除し、タグを打ちます。
 
-これらを、<span class="spell git-live-flow">git-live-flow</span>では<span class="spell release-close">release close</span>といいます。
+これらを、<span class="spell git-live-flow">Git Live Flow</span>では<span class="spell release-close">release close</span>といいます。
 
 
 実際には、
