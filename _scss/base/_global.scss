@@ -75,3 +75,18 @@ h1, h2, h3, h4, h5, h6{
 .text-justify {
     text-align: justify;
 }
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase, .initialism {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
