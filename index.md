@@ -47,14 +47,14 @@ $ wget https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.p
 
 もしくは
 
-``````````````````````
+`````````````````````` shell
 $ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
 
 ``````````````````````
 
 その後、
 
-``````````````````````
+`````````````````````` shell
 $ chmod 0777 ./git-live
 $ sudo mv ./git-live /usr/local/bin/git-live
 
@@ -63,21 +63,21 @@ $ sudo mv ./git-live /usr/local/bin/git-live
 ### Linux
 
 
-``````````````````````
+`````````````````````` shell
 $ wget https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
 
 ``````````````````````
 
 もしくは
 
-``````````````````````
+`````````````````````` shell
 $ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
 
 ``````````````````````
 
 その後、
 
-``````````````````````
+`````````````````````` shell
 $ chmod 0777 ./git-live
 $ sudo mv ./git-live /usr/local/bin/git-live
 
@@ -162,7 +162,7 @@ master
 
 言葉で説明すると、とても難しそうですが、実際には、
 
-``````````````````````
+`````````````````````` shell
 $ git live init
 
 ``````````````````````
@@ -194,7 +194,7 @@ default:xxxxxxx
 
 featureリポジトリは、upstream/developから作成されます。
 
-``````````````````````
+`````````````````````` shell
 $ git live feature start <featureの名前>
 
 ``````````````````````
@@ -203,14 +203,14 @@ $ git live feature start <featureの名前>
 
 featureの開発が終わったら、originリポジトリにpushします。
 
-``````````````````````
+`````````````````````` shell
 $ git live push
 
 ``````````````````````
 
 もしくは
 
-``````````````````````
+`````````````````````` shell
 $ git live feature push
 
 ``````````````````````
