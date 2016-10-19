@@ -25,7 +25,7 @@ lang: ja
 
 ## 入門 {#h-introduction}
 
-<span class="spell git-live-flow">git-live-flow</span>は<a href="http://nvie.com/posts/a-successful-git-branching-model/" rel="no-follow" target="_blank">git-flow</a>と同じく、マージを前提にした開発フローです。
+<span class="spell git-live-flow">git-live-flow</span>は<a href="http://nvie.com/posts/a-successful-git-branching-model/" rel="nofollow" target="_blank">git-flow</a>と同じく、マージを前提にした開発フローです。
 
 <span class="spell git-live-flow">git-live-flow</span>とgit-flow。この二つの考え方は非常によく似ています。
 
@@ -85,11 +85,11 @@ $ sudo mv ./git-live /usr/local/bin/git-live
 ### Windows
 以下のファイルを、パスが通ったディレクトリにおいてください。
 
- * https://raw.githubusercontent.com/Git-Live/git-live/master/git-live.php
- * https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.bat
+ * [https://raw.githubusercontent.com/Git-Live/git-live/master/git-live.php](https://raw.githubusercontent.com/Git-Live/git-live/master/git-live.php)
+ * [https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.bat](https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.bat)
 
 
-## <span class="spell git-live-flow">git-live-flow</span>の要件
+## <span class="spell git-live-flow">git-live-flow</span>の要件 {#h-requirements}
 
  * リモートブランチは以下の三種類を用いる
 
@@ -127,7 +127,7 @@ $ sudo mv ./git-live /usr/local/bin/git-live
 
 
 
-## 最も単純な流れ
+## 最も単純な流れ {#h-basic_flow}
 
 ### 準備
 
@@ -218,7 +218,32 @@ $ git live feature push
  * `git live feature push`
      * 作業用リポジトリを最新化してpushする
 
+### プルリクエストを出し、コードレビューを受ける/行う
 
-## コマンドリファレンス
+
+<span class="spell repository_name">origin</span>にpushした、<span class="spell branch_name">feature</span>ブランチから、<span class="spell repository_name">upstream</span>の<span class="spell branch_name">develop</span>ブランチへpull-request
+を出します。
+
+コードレビューを行い、問題がなければマージします。
+
+
+レビュー者は以下のコマンドを利用して、出されたpull-requestの内容を、自分のローカルリポジトリに取得することが出来ます。
+
+`````````````````````` shell
+$ git live pr track <pull-requestのissue番号>
+``````````````````````
+
+`git live pr track`したコードを最新のpull-requestに更新する場合は、
+
+`````````````````````` shell
+$ git live pr pull
+``````````````````````
+
+で行います。
+
+`git live pr pull`は、`git live pr track`で自動作成されたブランチで行う必要があります。
+
+
+## コマンドリファレンス {#h-command_reference}
 
 
