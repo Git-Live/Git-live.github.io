@@ -431,3 +431,79 @@ $ git live hotfix close
 ## コマンドリファレンス {#h-command_reference}
 
 
+`git live feature start <feature name>`
+: 新たな開発用ブランチを'upstream'(共通リモートサーバー)の'develop'ブランチをベースとして作成し、開発用ブランチにスイッチします。
+`git live feature publish`
+: 複数人と同じ開発ブランチで作業するとき、自分の変更分を'upstream'(共通リモートサーバー)にプッシュします。
+`git live feature track <feature name>`
+: 'upstream'(共通リモートサーバー)から、誰かが作成した開発用ブランチを取得します。
+`git live feature push`
+: 'origin'(個人用リモートサーバー)に開発ブランチをpushします。(git live pushと動作は似ています)
+`git live feature pull`
+: 'origin'(個人用リモートサーバー)から開発ブランチをpullします。(git live pullと動作は似ています)
+`git live feature close`
+: すべての場所から、開発ブランチを削除します。プルリクエストがマージされたあとに実行してください。
+`git live pr track <pull request number>`
+: 'upstream'(共通リモートサーバー)からプルリクエストされているコードを取得します。
+`git live pr pull `
+: pr trackしたプルリクエストの内容を最新化
+`git live pr merge <pull request number>`
+: プルリクエストの内容をマージする。
+`git live hotfix open <release name>`
+: 緊急対応のため、'upstream'(共通リモートサーバー)の'master'ブランチからhotfixを開始します。
+`git live hotfix close`
+: hotfixを終了し、'master'と'develop'にコードをマージし、タグを作成します。
+`git live hotfix sync`
+: git live hotfix pullとgit live hotfix pushを連続で実行します。
+`git live hotfix state`
+: hotfixの状態を確認します。
+`git live hotfix track`
+: 誰かが開けたhotfixを取得します。
+`git live hotfix pull`
+: 'deploy'(デプロイ用リモートサーバー)と'upstream'(共通リモートサーバー)からpullします。
+`git live hotfix push`
+: 'deploy'(デプロイ用リモートサーバー)と'upstream'(共通リモートサーバー)にpushします。
+`git live release open <release name>`
+    : リリース作業を開始するため、release用のブランチを作成します。
+`git live release close`
+: releaseを終了し、'master'と'develop'にコードをマージし、タグを作成します。
+`git live release sync`
+: git live release pullとgit live release pushを連続で実行します。
+`git live release state`
+: releaseの状態を確認します。
+`git live release pull`
+: 'deploy'(デプロイ用リモートサーバー)と'upstream'(共通リモートサーバー)からpullします。
+`git live release push`
+: 'deploy'(デプロイ用リモートサーバー)と'upstream'(共通リモートサーバー)にpushします。
+`git live pull`
+: 適当な場所から、pullします。
+`git live push`
+: 適当な場所に、pushします。
+`git live update`
+: git-liveコマンドの最新化。
+`git live merge develop`
+: developから現在選択されているブランチに変更を取り込みます。
+`git live merge master`
+: masterから現在選択されているブランチに変更を取り込みます。
+`git live log develop`
+: developとのdiff
+`git live log master`
+: masterとのdiff
+`git live start`
+: 初期化します。
+`git live restart`
+: リポジトリを再構築します。
+`git live init`
+: git live で管理するリポジトリを対話形式で作成します。
+`git live init <clone_repository> <upstream_repository> <deploy_repository> (<clone_dir>)`
+: git live で管理するリポジトリを作成します。
+: clone_repository：
+    : 個人開発用のリモートリポジトリ(origin)。
+: upstream_repository：
+    : originのfork元、共有のリモートリポジトリ(upstream)。
+: deploy_repository：
+    : デプロイ用リポジトリ。
+: clone_dir：
+    : cloneするローカルのディレクトリ。
+
+
