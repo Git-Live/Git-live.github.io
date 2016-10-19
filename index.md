@@ -405,6 +405,29 @@ $ git live hotfix state
 $ git live hotfix sync
 ``````````````````````
 
+#### ホットフィックスを完了し<span class="spell hotfix-close">hotfix close</span>する
+すべてのホットフィックス作業が完了したら、<span class="spell branch_name">hotfix</span>ブランチを<span class="spell branch_name">master</span>ブランチと<span class="spell branch_name">develop</span>ブランチにマージし、
+<span class="spell branch_name">hotfix</span>ブランチを削除し、タグを打ちます。
+
+これらを、<span class="spell git-live-flow">Git Live Flow</span>では<span class="spell hotfix-close">hotfix close</span>といいます。
+
+
+実際には、
+
+`````````````````````` shell
+$ git live release close
+``````````````````````
+
+コマンドで自動的に行うことが出来ます。
+
+タグも、自動的に打たれます。
+
+別途GitHub上でリリースノートを書く必要がある場合は、GitHub上で作業してください。
+
+
+
+
+
 ## コマンドリファレンス {#h-command_reference}
 
 
