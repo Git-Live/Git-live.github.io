@@ -7,7 +7,8 @@
     -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
     box-shadow: 3px 3px rgba(0,0,0,0.1);
     overflow: hidden;
-
+    word-break: break-all;
+    word-wrap: break-word;
 
     .c { color: #586E75 } // Comment
     .err { color: #93A1A1 } // Error
@@ -84,10 +85,10 @@ code.highlighter-rouge{
     white-space: pre-wrap;
     border-radius: 4px;
     background-color: rgba(0,0,0,0.05);
+    padding: 2px 4px;
 }
 
 code {
     font-family: $code-font-family;
     line-height: 1.5;
-    padding: 2px 4px;
 }
