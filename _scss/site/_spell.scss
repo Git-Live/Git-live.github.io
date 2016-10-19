@@ -19,4 +19,10 @@
     &.branch_name{
         font-family: $branch_name-font-family;
     }
+    &.release-open{
+        font-family: $branch_name-font-family;
+    }
+    &.release-close{
+        font-family: $branch_name-font-family;
+    }
 }

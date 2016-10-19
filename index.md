@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "GIT LIVE FLOW : GIT HUB FLOW + GIT FLOW"
+title: "GIT LIVE FLOW : GitHub FLOW + GIT FLOW"
 meta:
-    description: "Git live flowは、git flowとgithub flowを合わせた、より良い開発フローです。"
-    keywords: "Git live flow,git-live,git flow,github flow,github,git,開発フロー,ブランチモデル"
+    description: "Git live flowは、git flowとGitHub flowを合わせた、より良い開発フローです。"
+    keywords: "Git live flow,git-live,git flow,GitHub flow,GitHub,git,開発フロー,ブランチモデル"
 og:
-    title: "GIT LIVE FLOW : GIT HUB FLOW + GIT FLOW"
-    description: "Git live flowは、git flowとgithub flowを合わせた、より良い開発フローです。"
+    title: "GIT LIVE FLOW : GitHub FLOW + GIT FLOW"
+    description: "Git live flowは、git flowとGitHub flowを合わせた、より良い開発フローです。"
     url: ""
     image: "img/og.jpg"
 lang: ja
@@ -14,7 +14,7 @@ lang: ja
 ---
 
 ## はじめに {#h-getting-started}
-<span class="spell git-live-flow">git-live-flow</span>は、<span class="spell php">PHP</span>で記述された、git hub及びそれに類似するサービスを利用して行う、ブランチモデルです。
+<span class="spell git-live-flow">git-live-flow</span>は、<span class="spell php">PHP</span>で記述された、GitHub及びそれに類似するサービスを利用して行う、ブランチモデルです。
 
 
 <span class="spell git-live">git-live</span>は<span class="spell git">Git</span>の拡張コマンドであり、<span class="spell git-live-flow">git-live-flow</span>を行う為の高度なリポジトリ操作を提供します。
@@ -45,13 +45,13 @@ rebaseは行いません。リモートリポジトリを大量のコミット�
 ### MAC OS
 
 `````````````````````` shell
-$ wget https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
+$ wget https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
 ``````````````````````
 
 もしくは
 
 `````````````````````` shell
-$ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
+$ curl https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
 ``````````````````````
 
 その後、
@@ -65,13 +65,13 @@ $ sudo mv ./git-live /usr/local/bin/git-live
 
 
 `````````````````````` shell
-$ wget https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
+$ wget https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
 ``````````````````````
 
 もしくは
 
 `````````````````````` shell
-$ curl https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
+$ curl https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
 ``````````````````````
 
 その後、
@@ -85,8 +85,8 @@ $ sudo mv ./git-live /usr/local/bin/git-live
 ### Windows
 以下のファイルを、パスが通ったディレクトリにおいてください。
 
- * [https://raw.githubusercontent.com/Git-Live/git-live/master/git-live.php](https://raw.githubusercontent.com/Git-Live/git-live/master/git-live.php)
- * [https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.bat](https://raw.githubusercontent.com/Git-Live/git-live/master/bin/git-live.bat)
+ * [https://raw.GitHubusercontent.com/Git-Live/git-live/master/git-live.php](https://raw.GitHubusercontent.com/Git-Live/git-live/master/git-live.php)
+ * [https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.bat](https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.bat)
 
 
 ## <span class="spell git-live-flow">git-live-flow</span>の要件 {#h-requirements}
@@ -104,7 +104,7 @@ $ sudo mv ./git-live /usr/local/bin/git-live
 <span class="spell repository_name">deploy</span>
 : リリース作業用のリポジトリ。別途用意する必要がない場合は、<span class="spell repository_name">upstream</span>と同一となる。
 : 特にwebアプリケーションの開発現場では、リリース用のファイルをDMZに一度スタックさせる必要があることが多い。
-: リリース用のリモートリポジトリを、Git Hubの管理外にする事によって、リリース作業自体はGit Hubの生死に依存しないと言うメリットもある。
+: リリース用のリモートリポジトリを、GitHubの管理外にする事によって、リリース作業自体はGitHubの生死に依存しないと言うメリットもある。
 : アクセス権限は、公式リポジトリと全く同じでないとならない。
 
  * 特別なブランチとして用意するのは以下の二つのみである
@@ -119,7 +119,7 @@ $ sudo mv ./git-live /usr/local/bin/git-live
 : hotfix を行う際は、<span class="spell repository_name">upstream</span>リポジトリの<span class="spell branch_name">master</span>ブランチをベースとして行う。
 
  * リモートリポジトリはすべてベアリポジトリである必要がある
-    * githubなどのサービスを利用していれば、リモートリポジトリはベアリポジトリとなります
+    * GitHubなどのサービスを利用していれば、リモートリポジトリはベアリポジトリとなります
 
  * release及び、hotfix可能なのは、公式リポジトリに変更権限を持つユーザーのみ
 
@@ -244,13 +244,18 @@ $ git live pr pull
 `git live pr pull`は、`git live pr track`で自動作成されたブランチで行う必要があります。
 
 
-#### <span class="spell branch_name">develp</span>ブランチから<span class="spell branch_name">release</span>ブランチを作成する
+#### リリース作業を行う
+
 
 リリース作業を行うために、<span class="spell branch_name">release</span>ブランチを作成します。
 
-この<span class="spell branch_name">release</span>ブランチブランチが作成された状態を、<span class="spell git-live-flow">git-live-flow</span>では、release open状態と定義してます。
+<span class="spell branch_name">release</span>ブランチは、<span class="spell repository_name">upstream</span>の<span class="spell branch_name">develp</span>ブランチから作成します。
 
- release openするには、以下のコマンドを実行します。
+
+この<span class="spell branch_name">release</span>ブランチブランチが作成された状態を、<span class="spell git-live-flow">git-live-flow</span>では、
+<span class="spell release-open">release open</span>状態と定義してます。
+
+<span class="spell release-open">release open</span>するには、以下のコマンドを実行します。
 
 `````````````````````` shell
 $ git live release open
@@ -276,12 +281,12 @@ $ git live release state
 release is close.
 ``````````````````````
 
-となった場合、`git live release open`可能です。
+となった場合、<span class="spell release-open">release open</span>可能です。
 
-最終的なビルドの作成、あるいは、ソースコードのデプロイは、release openした状態で行います。
+最終的なビルドの作成、あるいは、ソースコードのデプロイは、<span class="spell release-open">release open</span>した状態で行います。
 
 
-release openした状態で、不具合が見つかりコードを修正したくなった場合は、以下の方法で修正可能です。
+<span class="spell release-open">release open</span>した状態で、不具合が見つかりコードを修正したくなった場合は、以下の方法で修正可能です。
 
 1. コードを修正し、<span class="spell repository_name">upstream</span>に作成されたreleaseブランチにプルリクエストを出します
 2. 修正が問題ないことを確認したら、コードをマージします
@@ -298,13 +303,64 @@ $ git live release sync
 $ git live release sync
 ``````````````````````
 
-誰かが、release openしたreleaseブランチを、手元に取得する場合は、以下のコマンドを実行します。
+誰かが、<span class="spell release-open">release open</span>したreleaseブランチを、手元に取得する場合は、以下のコマンドを実行します。
 
-また、誰かの変更を、取り込む場合も同様です。
+また、誰かの変更を取り込む場合も同様です。
 
 `````````````````````` shell
 $ git live release sync
 ``````````````````````
+
+<span class="spell release-open">release open</span>した状態で、
+
+`````````````````````` shell
+$ git live release state
+``````````````````````
+
+コマンドを実行すると、今回リリースされる予定のコードの一覧を見ることが出来ます。
+
+
+また、<span class="spell release-open">release open</span>した状態で、<span class="spell branch_name">develop</span>ブランチにマージを行うことは出来ません。
+
+正確には、<span class="spell release-open">release open</span>した状態で行われた、<span class="spell branch_name">develop</span>ブランチへの変更は、すべて<span class="spell branch_name">release</span>ブランチに取り込む必要があります。
+
+#### リリースを完了し<span class="spell release-close">release close</span>する
+
+すべてのリリース作業が完了したら、<span class="spell branch_name">release</span>ブランチを<span class="spell branch_name">master</span>ブランチと<span class="spell branch_name">develop</span>ブランチにマージし、
+<span class="spell branch_name">release</span>ブランチを削除し、タグを打ちます。
+
+これらを、<span class="spell git-live-flow">git-live-flow</span>では<span class="spell release-close">release close</span>といいます。
+
+
+実際には、
+
+`````````````````````` shell
+$ git live release close
+``````````````````````
+
+コマンドで自動的に行うことが出来ます。
+
+タグも、自動的に打たれます。
+
+別途GitHub上でリリースノートを書く必要がある場合は、GitHub上で作業してください。
+
+
+<span class="spell branch_name">develop</span>ブランチが、<span class="spell branch_name">release</span>ブランチよりも進んでいる場合、<span class="spell release-close">release close</span>は失敗します。
+
+どうしても、<span class="spell branch_name">develop</span>ブランチの更新内容を、<span class="spell branch_name">release</span>ブランチに取り込みたくない場合は、
+
+`````````````````````` shell
+$ git live release close-force
+``````````````````````
+
+を試すことが出来ます。
+
+これは、developブランチへの変更を無視して、<span class="spell release-close">release close</span>する事ができます。
+
+ただし、自動的に行われるmergeでConflictしないように、<span class="spell branch_name">release</span>ブランチの内容をすべて手動で、<span class="spell branch_name">develop</span>ブランチにマージしておいてください。
+
+
+
 
 ## コマンドリファレンス {#h-command_reference}
 
