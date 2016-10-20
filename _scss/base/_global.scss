@@ -62,33 +62,21 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-.text-left {
-    text-align: left;
+dl {
+    margin-top: 0;
+    margin-bottom: 24px;
 }
 
-.text-right {
-    text-align: right;
+dt,
+dd {
+    line-height: 1.5;
 }
 
-.text-center {
-    text-align: center;
+dt {
+    font-weight: bold;
 }
 
-.text-justify {
-    text-align: justify;
-}
-.text-nowrap {
-  white-space: nowrap;
+dd {
+    margin-left: 0;
 }
 
-.text-lowercase {
-  text-transform: lowercase;
-}
-
-.text-uppercase, .initialism {
-  text-transform: uppercase;
-}
-
-.text-capitalize {
-  text-transform: capitalize;
-}
