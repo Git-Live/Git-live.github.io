@@ -40,32 +40,12 @@ rebaseは行いません。リモートリポジトリを大量のコミット�
  * <span class="spell git-live">git-live</span>は<span class="spell php">PHP</span>で記述された、<span class="spell git">Git</span>の拡張コマンド群です。あらかじめ、<span class="spell git">Git</span>と<span class="spell php">PHP</span>をインストールしておく必要があります。
 
  * <span class="spell git-live">git-live</span>は、、<span class="spell git">Git</span>と<span class="spell php">PHP</span>が動作する以下の環境で動作します。
-     * MAC OS
-     * Linux
-     * Windows
+     * [macOS](#h-installation-macOS)
+     * [Linux](#h-installation-Linux)
+     * [Windows](#h-installation-Windows)
 
 
-### MAC OS
-
-`````````````````````` shell
-$ wget https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
-``````````````````````
-
-もしくは
-
-`````````````````````` shell
-$ curl https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
-``````````````````````
-
-その後、
-
-`````````````````````` shell
-$ chmod 0777 ./git-live
-$ sudo mv ./git-live /usr/local/bin/git-live
-``````````````````````
-
-### Linux
-
+### macOS {#h-installation-macOS}
 
 `````````````````````` shell
 $ wget https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
@@ -84,8 +64,28 @@ $ chmod 0777 ./git-live
 $ sudo mv ./git-live /usr/local/bin/git-live
 ``````````````````````
 
+### Linux {#h-installation-Linux}
 
-### Windows
+
+`````````````````````` shell
+$ wget https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -O git-live
+``````````````````````
+
+もしくは
+
+`````````````````````` shell
+$ curl https://raw.GitHubusercontent.com/Git-Live/git-live/master/bin/git-live.phar -o git-live
+``````````````````````
+
+その後、
+
+`````````````````````` shell
+$ chmod 0777 ./git-live
+$ sudo mv ./git-live /usr/local/bin/git-live
+``````````````````````
+
+
+### Windows {#h-installation-Windows}
 以下のファイルを、パスが通ったディレクトリにおいてください。
 
  * [https://raw.GitHubusercontent.com/Git-Live/git-live/master/git-live.php](https://raw.GitHubusercontent.com/Git-Live/git-live/master/git-live.php)
