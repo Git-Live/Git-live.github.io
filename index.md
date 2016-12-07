@@ -34,6 +34,13 @@ lang: ja
 
 rebaseは行いません。リモートリポジトリを大量のコミットログで汚したくない場合は、squash mergeを行います。
 
+## 貢献・翻訳 {#h-contributor}
+
+ * [Git Liveコマンド](https://github.com/Git-Live/git-live)
+ * [このサイト](https://github.com/Git-Live/Git-live.github.io)
+
+当ドキュメントの翻訳や、git live コマンドの修正に関しては上記リポジトリを参照してください。
+
 
 ## インストール・設定 {#h-installation}
 
@@ -431,8 +438,21 @@ $ git live hotfix close
 ## コマンドリファレンス {#h-command_reference}
 
 
+
 `git live feature start <feature name>`
 : 新たな開発用ブランチを'upstream'(共通リモートサーバー)の'develop'ブランチをベースとして作成し、開発用ブランチにスイッチします。
+
+
+`git live feature checkout <feature name>`
+: 作成済の別featureに移動します。
+
+
+`git live feature change <feature name>`
+: git live feature checkoutへのエイリアスです。
+
+
+`git live feature list`
+: featureの一覧を取得します。
 
 
 `git live feature publish`
@@ -465,6 +485,14 @@ $ git live hotfix close
 
 `git live pr merge <pull request number>`
 : プルリクエストの内容をマージする。
+
+
+`git live pr feature start-soft <pull request number> <feature name>`
+: プルリクエストから新たなfeatureを作成します。
+
+
+`git live pr feature start <pull request number> <feature name>`
+: プルリクエストをマージした新しいfeatureを作成する。
 
 
 `git live hotfix open <release name>`
@@ -502,9 +530,9 @@ $ git live hotfix close
 `git live release close`
 : releaseを終了し、'master'と'develop'にコードをマージし、タグを作成します。
 
+
 `git live release close-force`
-: releaseを終了し、'master'と'develop'にコードをマージし、タグを作成します。
-: エラーを無視して強制的にreleaseを閉じます。
+: releaseを終了し、'master'と'develop'にコードをマージし、タグを作成します。developとの差分を確認しないことに注意してください。
 
 
 `git live release sync`
@@ -513,7 +541,6 @@ $ git live hotfix close
 
 `git live release state`
 : releaseの状態を確認します。
-: release openされているなら、リリースされるファイルの一覧を取得することが出来ます。
 
 
 `git live release pull`
